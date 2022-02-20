@@ -1,0 +1,26 @@
+﻿@model IEnumerable<FirstProgram.Models.Mess>
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index View</title>
+</head>
+<body>
+    <p>Model: </p>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Message)
+            </td>
+        </tr>
+    }
+    <br />
+    <p>ViewBag: </p>
+    <p> @ViewBag.Message</p><p> @ViewBag.CurrentTime</p>
+</body>
+</html>
+

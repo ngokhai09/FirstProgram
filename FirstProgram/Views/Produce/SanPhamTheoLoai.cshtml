@@ -1,0 +1,35 @@
+﻿@using FirstProgram.Models;
+@model List<tDanhMucSP>
+@{
+    ViewBag.Title = "SanPhamTheoLoai";
+    Layout = "~/Views/Shared/_LayoutProduce.cshtml";
+}
+
+<h2>SanPhamTheoLoai</h2>
+
+
+<p>@Model.Count</p>
+@{
+    int i = 0;
+    
+    foreach (var item in Model)
+    {
+        i++;
+        <div class="w3-quarter">
+            <a href="@Url.Action("ChiTietSanPham", "Produce", new {@MaSP = item.MaSP })">
+                <img src="@Url.Content("~/Images/Produce/" + item.Anh)" alt="Sandwich" style="width:100%">
+            </a>
+            <h3>@item.TenSP</h3>
+            <p>@item.Gia</p>
+            <p>@item.GioiThieuSP</p>
+        </div>
+        if (i % 4 == 0)
+        {
+            <div style="clear:both">
+
+            </div>
+        }
+    }
+}
+
+

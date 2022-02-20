@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "About";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About</title>
+</head>
+<body>
+    <p> @ViewData["Message"] </p><p> @ViewData["CurrentTime"] </p>
+    <br />
+    <p> @ViewBag.Message</p><p> @ViewBag.CurrentTime</p>
+                            <br />
+    <p><em>TempData: </em> @TempData["Message"]</p>
+</body>
+</html>

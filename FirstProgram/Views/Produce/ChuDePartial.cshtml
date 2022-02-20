@@ -1,0 +1,8 @@
+﻿@using FirstProgram.Models;
+@model List<tLoaiSP>
+  
+
+@foreach(var item in Model){
+    <a href="@Url.Action("SanPhamTheoLoai", "Produce", new { @MaLoai = item.MaLoai })" class="w3-bar-item w3-button">@item.Loai</a>
+    
+}
